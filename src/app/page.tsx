@@ -5,10 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
 
 export default function Home() {
-	const sectionHero = useRef(null)
-	const section2 = useRef(null)
-	const section3 = useRef(null)
-	const section4 = useRef(null)
+	// const sectionHero = useRef(null)
+	// const section2 = useRef(null)
+	// const section3 = useRef(null)
+	// const section4 = useRef(null)
 
 	gsap.registerPlugin(ScrollTrigger)
 
