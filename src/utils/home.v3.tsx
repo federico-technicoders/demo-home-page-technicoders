@@ -6,8 +6,8 @@ import { useGSAP } from "@gsap/react"
 
 export default function Home() {
 	const sectionHero = useRef(null)
-	const buttonMas       = useRef(null)
-	const mas             = useRef(null)
+	// const buttonMas       = useRef(null)
+	// const mas             = useRef(null)
 	const section2        = useRef(null)
 	const contentSection2 = useRef(null)
 	const tileSection2    = useRef(null)
@@ -18,14 +18,14 @@ export default function Home() {
 
 
 	useGSAP(() => {
-		const buttonMasCurrent = buttonMas.current
-		const masCurrent = mas.current
+		// const buttonMasCurrent = buttonMas.current
+		// const masCurrent = mas.current
 		const sectionHeroCurrent = sectionHero.current
 		const section2Current  = section2.current
 		const contentSection2Current = contentSection2.current
-		const titleSection2Current = tileSection2.current	
+		// const titleSection2Current = tileSection2.current	
 		const section3Current = section3.current
-		const section4Current = section4.current
+		// const section4Current = section4.current
 
 		// funciona pero se ve el texto encimado 
 		ScrollTrigger.create({
