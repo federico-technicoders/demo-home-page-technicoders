@@ -26,7 +26,7 @@ export const CajaCuadrada = () => {
 		
 		const section2Current = section2.current
 		const contentSection2Current = contentSection2.current	
-		const section2bCurrent = section2b.current
+		// const section2bCurrent = section2b.current
 
 		const section3Current = section3.current	
 		const contentSection3Current = contentSection3.current	
