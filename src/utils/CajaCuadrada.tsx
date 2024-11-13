@@ -6,8 +6,8 @@ import { useGSAP } from "@gsap/react"
 
 export const CajaCuadrada = () => {
     const sectionHero = useRef(null)
-	const buttonMas       = useRef(null)
-	const mas             = useRef(null)
+	// const buttonMas       = useRef(null)
+	// const mas             = useRef(null)
 
 	const section2        = useRef(null)
 	const contentSection2 = useRef(null)

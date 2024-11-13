@@ -17,8 +17,8 @@ export default function Home() {
 
 	useGSAP(() => {
 		const buttonMasCurrent = buttonMas.current
-		const masCurrent = mas.current
-		const sectionHeroCurrent = sectionHero.current
+		// const masCurrent = mas.current
+		// const sectionHeroCurrent = sectionHero.current
 		const section2Current  = section2.current
 		const titleSection2Current = tileSection2.current
 
