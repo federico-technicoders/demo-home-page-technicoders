@@ -78,10 +78,10 @@ export const CajaCuadrada1 = () => {
             width: '100vw',
             height: '100vh',
         })
-        .to(contentSection2Current,{
-            width: '100vw',
-            height: '100vh',
-        })
+        // .to(contentSection2Current,{
+        //     width: '100vw',
+        //     height: '100vh',
+        // })
         .to(contentSection2Current, {
             width: '150px',
             height: '150px',
@@ -171,6 +171,49 @@ export const CajaCuadrada1 = () => {
         //     pinSpacing: false,
         //     markers: true,
         // })
+
+        // sección video
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: section4Current,
+                start: "top bottom",
+                end: "top top",
+                scrub: true,
+                markers: true,
+            },
+        })
+        .to(contentSection3Current, {
+            width: '100vw',
+            height: '100vh',
+            borderRadius: '0px',
+            ease: "power1.inOut",
+        })
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: section4Current,
+                start: "top top+=10%",
+                end: "top top",
+                scrub: true,
+                markers: true,
+            },
+        })
+        .to(section4Current, {
+            display: 'flex'
+        })
+        .to(contentSection3Current, {
+            opacity: 0,
+        })
+
+
+
+        //animación de numeros 
+        
+       
+    })
+
+    useGSAP(()=>{
+        
     })
 
     return (
@@ -198,7 +241,7 @@ export const CajaCuadrada1 = () => {
                         // style={{ transform: 'scale(0.5)', transformOrigin: 'center center' }}
                     >
                         <div className='text-black'>
-                            <h1 className="text-5xl font-bold">Sección 2</h1>
+                            <h2 className="text-5xl font-bold">Sección 2</h2>
                             <p className="text-xl">Este es el título de la sección</p>
                         </div>
                     </div>
@@ -208,7 +251,7 @@ export const CajaCuadrada1 = () => {
                         // style={{ transform: 'scale(0.5)', transformOrigin: 'center center' }}
                     >
                         <div className='text-white'>
-                            <h1 className="text-8xl font-bold">01</h1>
+                            <h2 className="text-8xl font-bold">01</h2>
                             {/* <p className="text-xl">Este es el título de la sección</p> */}
                         </div>
                     </div>
@@ -275,9 +318,9 @@ export const CajaCuadrada1 = () => {
 
                 <section 
                     ref={section4}
-                    className="flex flex-col justify-center items-center w-full h-screen bg-slate-400"
+                    className="hidden  flex-col justify-center items-center w-full h-screen bg-slate-400"
                 >
-                    <h1 className="text-5xl font-bold">Sección 4</h1>
+                    <h1 className="text-5xl font-bold">Video sección 4</h1>
                     <p className="text-xl">Este es el título de la sección</p>
                 </section>
                 <section 
