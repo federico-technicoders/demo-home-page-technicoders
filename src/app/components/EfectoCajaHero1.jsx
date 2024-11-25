@@ -3,6 +3,8 @@ import { useRef } from 'react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
+import { TextReveal } from './TextReveal'
+// import { Soluciones } from './Soluciones'
 
 export const CajaCuadrada1 = () => {
     const sectionHero = useRef(null)
@@ -54,7 +56,7 @@ export const CajaCuadrada1 = () => {
         })
 
         // Anima el escalado de contentSection2 para agrandarse y luego achicarse
-        gsap.timeline({
+        const anim = gsap.timeline({
             scrollTrigger: {
                 trigger: section2bCurrent,
                 start: "top bottom",
@@ -208,6 +210,8 @@ export const CajaCuadrada1 = () => {
 
 
         //animación de numeros 
+        return () => anim.kill()
+        
         
        
     })
@@ -238,7 +242,7 @@ export const CajaCuadrada1 = () => {
                     <div 
                         ref={contentSection2}
                         className='absolute flex flex-col justify-center items-center w-[400px] h-[400px] bg-slate-200 rounded-2xl'
-                        // style={{ transform: 'scale(0.5)', transformOrigin: 'center center' }}
+                        
                     >
                         <div className='text-black'>
                             <h2 className="text-5xl font-bold">Sección 2</h2>
@@ -248,11 +252,11 @@ export const CajaCuadrada1 = () => {
                     <div 
                         ref={contentSection3}
                         className='absolute flex flex-col justify-center items-center w-[400px] h-[400px] bg-slate-800 rounded-2xl opacity-0'
-                        // style={{ transform: 'scale(0.5)', transformOrigin: 'center center' }}
+                        
                     >
                         <div className='text-white'>
                             <h2 className="text-8xl font-bold">01</h2>
-                            {/* <p className="text-xl">Este es el título de la sección</p> */}
+                          
                         </div>
                     </div>
                 </section>
@@ -317,35 +321,103 @@ export const CajaCuadrada1 = () => {
                 </section>	
 
                 <section 
-                    ref={section4}
-                    className="hidden  flex-col justify-center items-center w-full h-screen bg-slate-400"
-                >
-                    <h1 className="text-5xl font-bold">Video sección 4</h1>
-                    <p className="text-xl">Este es el título de la sección</p>
-                </section>
-                <section 
-                 
-                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
+                    // mirar la diferencia entre hidden y none, que hace que no funcinoes
+                    ref={section4} 
+                    className="flex none  flex-col justify-center items-center w-full h-screen  bg-slate-400"
                 >
                     
+                        <h2 className="text-5xl font-bold">Video sección 4</h2>
+                        <p className="text-xl">Este es el título de la sección</p>
+                
                 </section>
-                <section 
-                 
+                <section                  
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
-                    
+                    <div 
+                        className='flex justify-center items-center w-full h-full bg-slate-600'
+                    >
+                        <h2 className="text-5xl font-bold">
+                            Sección de cards
+                        </h2>
+                    </div>
                 </section>
-                <section 
-                 
+                {/* <Soluciones /> */}
+                <section                  
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
-                    
-                </section>
+                    <div 
+                        className='flex justify-center items-center w-full h-full bg-slate-200'
+                    >
+                        <h2 className="text-5xl text-black font-bold">
 
+                            Sección video portfolio
+                        </h2>
+                    </div>
+                </section>
+                {/* <section                  
+                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent p-[5%]"
+                >
+                     <div 
+                        className='flex justify-center items-center w-full h-full bg-white rounded-xl'
+                    >
+                        <h2 className="text-5xl text-black font-bold">
+                            Sección texto reveal
+                        </h2>
+                    </div>
+                </section> */}
+                <TextReveal />
+                <section                  
+                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
+                >
+                    <div 
+                        className='flex justify-center items-center w-full h-full bg-black'
+                    >
+                        <h2 className="text-5xl text-white font-bold">
+                            Sección Equipo
+                        </h2>
+                    </div>
+                </section>
+                <section                  
+                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
+                >
+
+                    <div 
+                        className='flex justify-center items-center w-full h-full bg-black'
+                    >
+                        <h2 className="text-5xl text-white font-bold">
+
+                            Sección Tecnología
+                        </h2>
+                    </div>
+                </section>
+                <section                  
+                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
+                >
+                    <div 
+                        className='flex justify-center items-center w-full h-full bg-black'
+                    >
+                        <h2 className="text-5xl text-white font-bold">
+
+                            Sección Testimonio
+                        </h2>
+                    </div>
+                </section>
+                <section                  
+                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
+                >
+                    <div 
+                        className='flex justify-center items-center w-full h-full bg-black'
+                    >
+                        <h2 className="text-5xl text-white font-bold">
+
+                            Sección Contacto
+                        </h2>
+                    </div>
+                </section>
             </main>
             
             <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center ">			
-                <h2>Este es el título del footer</h2>
+                <h2 className="text-5xl text-white font-bold">footer</h2>
             </footer>
         </div>
     )

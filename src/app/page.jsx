@@ -1,5 +1,6 @@
+import { CajaCuadrada1 } from "./components";
 
-import { CajaCuadrada1 } from "./components/EfectoCajaHero1"
+
 
 
 
