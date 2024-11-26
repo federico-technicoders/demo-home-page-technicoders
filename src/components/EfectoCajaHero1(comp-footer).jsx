@@ -9,7 +9,7 @@ import { Footer } from './Footer'
 // import { Soluciones } from './Soluciones'
 
 export const CajaCuadrada1 = () => {
-    const [ activeNumber, setActiveNumber ] = useState("01")
+    const [ activeNumber,  ] = useState("01")
     const sectionHero = useRef(null)
     const section2 = useRef(null)
     const contentSection2 = useRef(null)

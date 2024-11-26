@@ -1,4 +1,5 @@
 'use client'
+
 import { useRef, useState } from 'react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -142,6 +143,7 @@ export const CajaCuadrada1 = () => {
             onEnter: () => setActiveNumber("01"),
             onEnterBack: () => setActiveNumber("01"),
         })
+
         ScrollTrigger.create({
             trigger: section3Current,
             start: "top top",
@@ -153,6 +155,7 @@ export const CajaCuadrada1 = () => {
             onEnter: () => setActiveNumber("02"),
             onEnterBack: () => setActiveNumber("02"),
         })
+
         ScrollTrigger.create({
             trigger: section3aCurrent,
             start: "top top",
@@ -175,6 +178,7 @@ export const CajaCuadrada1 = () => {
             onEnter: () => setActiveNumber("04"),
             onEnterBack: () => setActiveNumber("04"),
         })
+
         // ScrollTrigger.create({
         //     trigger: section3cCurrent,
         //     start: "top top",
@@ -195,6 +199,7 @@ export const CajaCuadrada1 = () => {
                 markers: true,
             },
         })
+
         .to(contentSection3Current, {
             width: '100vw',
             height: '100vh',
@@ -211,9 +216,11 @@ export const CajaCuadrada1 = () => {
                 markers: true,
             },
         })
+
         .to(section4Current, {
             display: 'flex'
         })
+
         .to(contentSection3Current, {
             opacity: 0,
         })       
