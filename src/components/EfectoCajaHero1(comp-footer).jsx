@@ -139,8 +139,6 @@ export const CajaCuadrada1 = () => {
             pin: true,
             pinSpacing: false,
             markers: true,
-            onEnter: () => setActiveNumber("01"),
-            onEnterBack: () => setActiveNumber("01"),
         })
         ScrollTrigger.create({
             trigger: section3Current,
@@ -150,8 +148,6 @@ export const CajaCuadrada1 = () => {
             pin: true,
             pinSpacing: false,
             markers: true,
-            onEnter: () => setActiveNumber("02"),
-            onEnterBack: () => setActiveNumber("02"),
         })
         ScrollTrigger.create({
             trigger: section3aCurrent,
@@ -161,8 +157,6 @@ export const CajaCuadrada1 = () => {
             pin: true,
             pinSpacing: false,
             markers: true,
-            onEnter: () => setActiveNumber("03"),
-            onEnterBack: () => setActiveNumber("03"),
         })
         ScrollTrigger.create({
             trigger: section3bCurrent,
@@ -172,8 +166,6 @@ export const CajaCuadrada1 = () => {
             pin: true,
             pinSpacing: false,
             markers: true,
-            onEnter: () => setActiveNumber("04"),
-            onEnterBack: () => setActiveNumber("04"),
         })
         // ScrollTrigger.create({
         //     trigger: section3cCurrent,
