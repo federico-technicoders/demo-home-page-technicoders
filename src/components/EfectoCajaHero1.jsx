@@ -4,6 +4,8 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
 import { TextReveal } from './TextReveal'
+import { Soluciones } from './Soluciones'
+import { Footer } from './Footer'
 // import { Soluciones } from './Soluciones'
 
 export const CajaCuadrada1 = () => {
@@ -56,7 +58,7 @@ export const CajaCuadrada1 = () => {
         })
 
         // Anima el escalado de contentSection2 para agrandarse y luego achicarse
-        const anim = gsap.timeline({
+        gsap.timeline({
             scrollTrigger: {
                 trigger: section2bCurrent,
                 start: "top bottom",
@@ -194,7 +196,7 @@ export const CajaCuadrada1 = () => {
         gsap.timeline({
             scrollTrigger: {
                 trigger: section4Current,
-                start: "top top+=10%",
+                start: "top top+=3%",
                 end: "top top",
                 scrub: true,
                 markers: true,
@@ -205,13 +207,7 @@ export const CajaCuadrada1 = () => {
         })
         .to(contentSection3Current, {
             opacity: 0,
-        })
-
-
-
-        //animación de numeros 
-        return () => anim.kill()
-        
+        })       
         
        
     })
@@ -221,12 +217,12 @@ export const CajaCuadrada1 = () => {
     })
 
     return (
-        <div className="relative items-center justify-items-center min-h-screen pb-20 gap-16 font-[family-name:var(--font-geist-sans)]">
+        <div className="relative items-center justify-items-center min-h-screen gap-16 font-[family-name:var(--font-geist-sans)] bg-green-300 -z-50">
             <main className="flex flex-col justify-start items-start sm:items-start w-full ">
 
                 <section 
                     ref={sectionHero}
-                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
+                    className="flex flex-col justify-center items-center w-full h-screen bg-black"
                 >
                     <h1 className="text-5xl font-bold">Sección Hero</h1>
                     <p className="text-xl">Este es el título de la sección</p>
@@ -272,7 +268,7 @@ export const CajaCuadrada1 = () => {
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent -z-10"
                 >
                    <div 
-                        className='flex justify-center items-center w-full h-full'
+                        className='flex justify-center items-center w-full h-full bg-black'
                     >
                         <div className='w-1/2 h-full'></div>
                         <div className='flex justify-center items-center w-1/2 h-full bg-slate-400 text-black'>
@@ -285,7 +281,7 @@ export const CajaCuadrada1 = () => {
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent -z-10"
                 >
                    <div 
-                        className='flex justify-center items-center w-full h-full'
+                        className='flex justify-center items-center w-full h-full bg-black'
                     >
                         <div className='w-1/2 h-full'></div>
                         <div className='flex justify-center items-center w-1/2 h-full bg-slate-50 text-black'>
@@ -298,7 +294,7 @@ export const CajaCuadrada1 = () => {
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent -z-10"
                 >
                    <div 
-                        className='flex justify-center items-center w-full h-full'
+                        className='flex justify-center items-center w-full h-full bg-black'
                     >
                         <div className='w-1/2 h-full'></div>
                         <div className='flex justify-center items-center w-1/2 h-full bg-slate-200 text-black'>
@@ -311,7 +307,7 @@ export const CajaCuadrada1 = () => {
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent -z-10"
                 >
                    <div 
-                        className='flex justify-center items-center w-full h-full'
+                        className='flex justify-center items-center w-full h-full bg-black'
                     >
                         <div className='w-1/2 h-full'></div>
                         <div className='flex justify-center items-center w-1/2 h-full bg-slate-600 text-black'>
@@ -322,26 +318,29 @@ export const CajaCuadrada1 = () => {
 
                 <section 
                     // mirar la diferencia entre hidden y none, que hace que no funcinoes
-                    ref={section4} 
-                    className="flex none  flex-col justify-center items-center w-full h-screen  bg-slate-400"
-                >
-                    
-                        <h2 className="text-5xl font-bold">Video sección 4</h2>
-                        <p className="text-xl">Este es el título de la sección</p>
+                    className="flex flex-col justify-center items-center w-full h-screen bg-black"
+                    >
+                    <div 
+                        ref={section4} 
+                        className='hidden flex-col justify-center items-center w-full h-full bg-slate-400'
+                    >
+                        <h2 className="text-5xl font-bold">Video Presentación</h2>
+                        {/* <p className="text-xl">Este es el título de la sección 4</p> */}
+                    </div>
                 
                 </section>
-                <section                  
+                {/* <section                  
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
                     <div 
                         className='flex justify-center items-center w-full h-full bg-slate-600'
                     >
                         <h2 className="text-5xl font-bold">
-                            Sección de cards
+                            Sección Nuestras Soluciones (cards)
                         </h2>
                     </div>
-                </section>
-                {/* <Soluciones /> */}
+                </section> */}
+                <Soluciones />
                 <section                  
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
@@ -415,10 +414,8 @@ export const CajaCuadrada1 = () => {
                     </div>
                 </section>
             </main>
-            
-            <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center ">			
-                <h2 className="text-5xl text-white font-bold">footer</h2>
-            </footer>
+            <Footer />
+
         </div>
     )
 }

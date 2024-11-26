@@ -1,7 +1,4 @@
-import { CajaCuadrada1 } from "./components";
-
-
-
+import { CajaCuadrada1 } from "../components";
 
 
 export default function Home() {
