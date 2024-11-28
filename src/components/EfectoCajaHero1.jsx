@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
+import { TecnologiasSection } from './Tecnologias/TecnologiasSection.js'
 import { TextReveal } from './TextReveal'
 import { Soluciones } from './Soluciones'
 import { Footer } from './Footer'
@@ -370,7 +371,7 @@ export const CajaCuadrada1 = () => {
                         </h2>
                     </div>
                 </section>
-                <section                  
+                {/* <section                  
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
 
@@ -382,7 +383,8 @@ export const CajaCuadrada1 = () => {
                             Sección Tecnología
                         </h2>
                     </div>
-                </section>
+                </section> */}
+                <TecnologiasSection />
                 <section                  
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
