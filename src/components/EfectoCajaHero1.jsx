@@ -364,11 +364,17 @@ export const CajaCuadrada1 = () => {
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
                     <div 
-                        className='flex justify-center items-center w-full h-full bg-black'
+                        className='flex flex-col justify-center items-center w-full h-full bg-black'
                     >
-                        <h2 className="text-5xl text-white font-bold">
+                        <h2 className="text-5xl text-white font-bold mb-10">
                             Sección Equipo
                         </h2>
+                        <div className='flex gap-1 justify-around items-center w-full'>
+                            <div className='w-[23%] h-[500px] bg-white rounded-xl'></div>
+                            <div className='w-[23%] h-[500px] bg-white rounded-xl'></div>
+                            <div className='w-[23%] h-[500px] bg-white rounded-xl'></div>
+                            <div className='w-[23%] h-[500px] bg-white rounded-xl'></div>
+                        </div>
                     </div>
                 </section>
                 {/* <section                  
@@ -389,29 +395,47 @@ export const CajaCuadrada1 = () => {
                     className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
                 >
                     <div 
-                        className='flex justify-center items-center w-full h-full bg-black'
+                        className='flex flex-col justify-center items-center w-full h-full bg-black'
                     >
                         <h2 className="text-5xl text-white font-bold">
 
-                            Sección Testimonio
+                            Que dicen de nosotros
                         </h2>
+                        <div className='flex justify-start items-start w-full h-screen'>
+                            <div className='flex justify-end items-center w-[60%] h-full  rounded-xl p-2'>
+                                <div className='flex justify-center items-center w-[60%] h-[60%] bg-slate-400 rounded-xl'>
+                                    <div className='flex justify-center items-center rounded-full bg-[#FFFFFF40] w-12 h-12'>
+                                        ▶️
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='flex justify-start items-center w-[40%] h-full  rounded-xl p-2'>
+                                <div className='flex justify-center items-center w-[60%] h-[60%] bg-white rounded-xl'>
+
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
                 </section>
                 <section                  
-                    className="flex flex-col justify-center items-center w-full h-screen bg-transparent"
+                    className="flex flex-col justify-center items-center w-full min-h-screen bg-transparent"
                 >
                     <div 
-                        className='flex justify-center items-center w-full h-full bg-black'
+                        className='flex flex-col justify-center items-center w-full h-full bg-black'
                     >
-                        <h2 className="text-5xl text-white font-bold">
+                        <h2 className="text-5xl text-white font-bold mb-10">
 
                             Sección Contacto
                         </h2>
+                        <div className='w-[700px] h-[800px] bg-[#ffffff20] rounded-xl mb-24'>
+
+                        </div>
                     </div>
                 </section>
             </main>
             <Footer />
-
         </div>
     )
 }
